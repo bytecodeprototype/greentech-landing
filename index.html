@@ -1,0 +1,1213 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+            GREENTECH Cartagena — Control de plagas, desinfección y seguridad
+        </title>
+        <meta
+            name="description"
+            content="GREENTECH Cartagena: control de plagas, lavado de tanques de agua, desinfección de espacios y soluciones de seguridad. Atención inmediata por WhatsApp."
+        />
+        <meta name="theme-color" content="#0f9d58" />
+        <meta property="og:title" content="GREENTECH Cartagena" />
+        <meta
+            property="og:description"
+            content="Ambientes saludables. Espacios seguros. Vida sin plagas."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_CO" />
+        <meta
+            property="og:image"
+            content="https://via.placeholder.com/1200x630.png?text=GREENTECH"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --bg: #0b172a;
+                /* slate-950 */
+                --card: #0f223d;
+                /* blue-950 mix */
+                --muted: #94a3b8;
+                /* slate-400 */
+                --text: #e2e8f0;
+                /* slate-200 */
+                --brand: #f0fa30;
+                /* green-500 */
+                --brand-600: #f0fa30;
+                /* green-600 */
+                --accent: #38bdf8;
+                /* sky-400 */
+                --ring: rgba(34, 197, 94, 0.35);
+                --radius: 18px;
+                --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+                --shadow-soft: 0 6px 20px rgba(2, 6, 23, 0.35);
+                --container: 1200px;
+                --spacing-xs: 8px;
+                --spacing-sm: 12px;
+                --spacing-md: 16px;
+                --spacing-lg: 20px;
+                --spacing-xl: 24px;
+                --spacing-2xl: 32px;
+                --spacing-3xl: 40px;
+                --spacing-4xl: 48px;
+                --spacing-section: 80px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                overflow-x: hidden;
+            }
+
+            body {
+                margin: 0;
+                font-family:
+                    "Inter",
+                    system-ui,
+                    Segoe UI,
+                    Roboto,
+                    Helvetica,
+                    Arial,
+                    sans-serif;
+                color: var(--text);
+                background:
+                    radial-gradient(
+                        ellipse 1400px 700px at 85% -5%,
+                        rgba(56, 189, 248, 0.08),
+                        transparent 65%
+                    ),
+                    radial-gradient(
+                        ellipse 1200px 600px at 0% 20%,
+                        rgba(34, 197, 94, 0.08),
+                        transparent 70%
+                    ),
+                    radial-gradient(
+                        ellipse 800px 400px at 100% 80%,
+                        rgba(56, 189, 248, 0.04),
+                        transparent 60%
+                    ),
+                    linear-gradient(
+                        180deg,
+                        #071221 0%,
+                        #081423 25%,
+                        #0a1628 50%,
+                        #0b172a 75%,
+                        #0c1a2d 100%
+                    );
+                background-attachment: fixed;
+                min-height: 100vh;
+                overflow-x: hidden;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            img {
+                max-width: 100%;
+                display: block;
+                height: auto;
+            }
+
+            .container {
+                max-width: var(--container);
+                margin-inline: auto;
+                padding: 0 var(--spacing-lg);
+                width: 100%;
+            }
+
+            /* Header */
+            header {
+                position: sticky;
+                top: 0;
+                z-index: 50;
+                backdrop-filter: saturate(140%) blur(8px);
+                background: rgba(7, 18, 33, 0.6);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+            }
+
+            .nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--spacing-md);
+                padding: var(--spacing-sm) 0;
+            }
+
+            .brand {
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-sm);
+                font-weight: 800;
+                letter-spacing: 0.2px;
+            }
+
+            .brand .logo {
+                width: 36px;
+                height: 36px;
+                border-radius: 10px;
+                display: grid;
+                place-items: center;
+                font-weight: 800;
+                background: linear-gradient(
+                    135deg,
+                    var(--brand),
+                    var(--accent)
+                );
+                color: #03240e;
+            }
+
+            .nav ul {
+                list-style: none;
+                display: flex;
+                gap: var(--spacing-xl);
+                padding: 0;
+                margin: 0;
+            }
+
+            .nav a.link {
+                color: var(--muted);
+            }
+
+            .nav a.link:hover {
+                color: #fff;
+            }
+
+            .cta {
+                display: inline-flex;
+                align-items: center;
+                gap: var(--spacing-xs);
+                padding: var(--spacing-sm) var(--spacing-md);
+                border-radius: 999px;
+                font-weight: 700;
+                background: linear-gradient(
+                    135deg,
+                    var(--brand),
+                    var(--brand-600)
+                );
+                color: #03240e;
+                box-shadow: var(--shadow);
+                border: 1px solid rgba(34, 197, 94, 0.35);
+            }
+
+            .cta svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .menu-btn {
+                display: none;
+            }
+
+            /* Hero */
+            .hero {
+                padding: var(--spacing-section) 0 var(--spacing-3xl);
+                background: none !important;
+                border: none !important;
+            }
+
+            .hero-wrap {
+                display: grid;
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: var(--spacing-3xl);
+                align-items: center;
+            }
+
+            .eyebrow {
+                display: inline-flex;
+                align-items: center;
+                gap: var(--spacing-xs);
+                font-size: 12px;
+                color: #b3e6c9;
+                background: rgba(34, 197, 94, 0.12);
+                border: 1px solid rgba(34, 197, 94, 0.25);
+                padding: 6px 10px;
+                border-radius: 999px;
+            }
+
+            h1 {
+                font-size: 44px;
+                line-height: 1.05;
+                margin: var(--spacing-sm) 0 var(--spacing-md);
+            }
+
+            .lead {
+                font-size: 18px;
+                color: var(--muted);
+                max-width: 60ch;
+            }
+
+            .hero-cta {
+                display: flex;
+                gap: var(--spacing-sm);
+                margin-top: var(--spacing-xl);
+                flex-wrap: wrap;
+            }
+
+            .ghost {
+                display: inline-flex;
+                align-items: center;
+                gap: var(--spacing-sm);
+                padding: var(--spacing-sm) var(--spacing-md);
+                border-radius: 999px;
+                font-weight: 700;
+                color: #e2f7ff;
+                border: 1px solid rgba(56, 189, 248, 0.35);
+                background: rgba(2, 132, 199, 0.12);
+            }
+
+            .hero-card {
+                background: linear-gradient(
+                    180deg,
+                    rgba(15, 34, 61, 0.85),
+                    rgba(15, 34, 61, 0.55)
+                );
+                border: 1px solid rgba(148, 163, 184, 0.18);
+                border-radius: var(--radius);
+                padding: var(--spacing-lg);
+                box-shadow: var(--shadow-soft);
+            }
+
+            .hero-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: var(--spacing-sm);
+            }
+
+            .stat {
+                background: rgba(2, 6, 23, 0.45);
+                border: 1px solid rgba(148, 163, 184, 0.18);
+                border-radius: 14px;
+                padding: var(--spacing-md);
+            }
+
+            .stat b {
+                font-size: 26px;
+            }
+
+            /* Sections */
+            section {
+                padding: var(--spacing-section) 0;
+                position: relative;
+            }
+
+            /* Alternate section backgrounds */
+            section:nth-child(odd) {
+                background: rgba(2, 6, 23, 0.15);
+                border-top: 1px solid rgba(148, 163, 184, 0.08);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+            }
+
+            section:nth-child(even) {
+                background: rgba(15, 34, 61, 0.08);
+            }
+
+            /* Section separators */
+            section::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 2px;
+                background: linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--brand),
+                    transparent
+                );
+                opacity: 0.6;
+            }
+
+            /* Remove separator from first section */
+            section.hero::before {
+                display: none;
+            }
+
+            /* Testimonials section - reduced spacing */
+            section#testimonios {
+                padding: var(--spacing-4xl) 0;
+            }
+
+            .section-title {
+                font-size: 28px;
+                margin: 0 0 var(--spacing-sm);
+            }
+
+            .section-lead {
+                color: var(--muted);
+                max-width: 70ch;
+            }
+
+            /* Services */
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: var(--spacing-xl);
+                margin-top: var(--spacing-2xl);
+                align-items: start;
+            }
+
+            .card {
+                position: relative;
+                border-radius: var(--radius);
+                padding: var(--spacing-xl);
+                box-shadow: var(--shadow-soft);
+                overflow: hidden;
+                background-size: cover;
+                background-position: center;
+                min-height: 380px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border: 1px solid rgba(148, 163, 184, 0.18);
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+
+            .card-title {
+                position: relative;
+                z-index: 2;
+                align-self: flex-start;
+            }
+
+            .card-content {
+                position: relative;
+                z-index: 2;
+                margin-top: auto;
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-xs);
+            }
+
+            .card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.1) 0%,
+                    rgba(0, 0, 0, 0.05) 40%,
+                    rgba(0, 0, 0, 0.3) 60%,
+                    rgba(0, 0, 0, 0.8) 100%
+                );
+                z-index: 1;
+            }
+
+            .card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            }
+
+            .card:hover::before {
+                background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.2) 0%,
+                    rgba(0, 0, 0, 0.1) 40%,
+                    rgba(0, 0, 0, 0.4) 60%,
+                    rgba(0, 0, 0, 0.85) 100%
+                );
+            }
+
+            .card.fumigacion {
+                background-image: url("assets/4.jpg");
+            }
+
+            .card.tanques {
+                background-image: url("assets/3.jpg");
+            }
+
+            .card.desinfeccion {
+                background-image: url("assets/2.jpg");
+            }
+
+            .card.seguridad {
+                background-image: url("assets/1.jpg");
+            }
+
+            .card .badge {
+                display: inline-flex;
+                align-items: center;
+                gap: var(--spacing-xs);
+                font-size: 12px;
+                padding: 6px 12px;
+                border-radius: 999px;
+                background: rgba(240, 250, 48, 0.9);
+                border: 1px solid rgba(240, 250, 48, 0.3);
+                color: #03240e;
+                font-weight: 600;
+                backdrop-filter: blur(8px);
+                align-self: flex-start;
+            }
+
+            .card-content h3 {
+                margin: 0;
+                font-size: 22px;
+                font-weight: 700;
+                color: white;
+                text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+                line-height: 1.3;
+            }
+
+            .card p {
+                margin: 0;
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 15px;
+                line-height: 1.4;
+                text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+            }
+
+            /* Differentials */
+            .grid-3 {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--spacing-lg);
+                margin-top: var(--spacing-2xl);
+            }
+
+            .feature {
+                background: rgba(2, 6, 23, 0.45);
+                border: 1px solid rgba(148, 163, 184, 0.16);
+                border-radius: 14px;
+                padding: var(--spacing-lg);
+            }
+
+            .feature h4 {
+                margin: 6px 0 var(--spacing-xs);
+            }
+
+            /* Testimonials */
+            .testis {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--spacing-lg);
+                margin-top: var(--spacing-2xl);
+            }
+
+            .quote {
+                background: linear-gradient(
+                    180deg,
+                    rgba(15, 34, 61, 0.88),
+                    rgba(15, 34, 61, 0.6)
+                );
+                border: 1px solid rgba(148, 163, 184, 0.18);
+                border-radius: 16px;
+                padding: var(--spacing-lg);
+                font-style: italic;
+            }
+
+            .quote b {
+                display: block;
+                margin-top: var(--spacing-sm);
+                font-style: normal;
+            }
+
+            /* Contact */
+            .contact {
+                display: grid;
+                grid-template-columns: 1.2fr 0.8fr;
+                gap: var(--spacing-xl);
+                margin-top: var(--spacing-2xl);
+            }
+
+            .contact .panel {
+                background: rgba(2, 6, 23, 0.45);
+                border: 1px solid rgba(148, 163, 184, 0.16);
+                border-radius: 16px;
+                padding: var(--spacing-lg);
+            }
+
+            .list {
+                display: grid;
+                gap: var(--spacing-sm);
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .list li {
+                display: flex;
+                gap: var(--spacing-sm);
+                align-items: flex-start;
+            }
+
+            .list svg {
+                flex: 0 0 20px;
+                margin-top: 2px;
+            }
+
+            /* Floating WhatsApp button */
+            .floating-whatsapp {
+                position: fixed;
+                bottom: 80px;
+                right: 30px;
+                width: 56px;
+                height: 56px;
+                background: linear-gradient(
+                    135deg,
+                    var(--brand),
+                    var(--brand-600)
+                );
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+                border: none;
+                cursor: pointer;
+                color: #03240e;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .floating-whatsapp:hover {
+                transform: scale(1.1);
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            }
+
+            .floating-whatsapp svg {
+                width: 32px;
+                height: 32px;
+            }
+
+            /* Footer */
+            footer {
+                padding: var(--spacing-2xl) 0;
+                border-top: 1px solid rgba(148, 163, 184, 0.15);
+                color: var(--muted);
+            }
+
+            /* Utilities */
+            .sr {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+
+            /* Responsive */
+            @media (max-width: 1000px) {
+                .hero-wrap {
+                    grid-template-columns: 1fr;
+                }
+
+                .cards {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: var(--spacing-lg);
+                }
+
+                .grid-3 {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                .contact {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            @media (max-width: 640px) {
+                h1 {
+                    font-size: 28px;
+                    line-height: 1.2;
+                    margin: var(--spacing-sm) 0 var(--spacing-md);
+                }
+
+                .cards {
+                    grid-template-columns: 1fr;
+                    gap: var(--spacing-lg);
+                }
+
+                .card {
+                    min-height: 300px;
+                    padding: var(--spacing-lg);
+                }
+
+                .card h3 {
+                    font-size: 20px;
+                }
+
+                .card p {
+                    font-size: 14px;
+                }
+
+                .grid-3 {
+                    grid-template-columns: 1fr;
+                }
+
+                .testis {
+                    grid-template-columns: 1fr;
+                }
+
+                .hero .eyebrow {
+                    justify-content: center;
+                }
+
+                .hero {
+                    text-align: center;
+                    padding: var(--spacing-4xl) 0 var(--spacing-4xl);
+                }
+
+                .hero-card {
+                    margin-top: var(--spacing-lg);
+                }
+
+                .stat {
+                    padding: var(--spacing-sm);
+                }
+
+                .stat b {
+                    font-size: 20px;
+                }
+
+                .lead {
+                    font-size: 16px;
+                    line-height: 1.5;
+                    margin-bottom: var(--spacing-lg);
+                }
+
+                .nav ul {
+                    display: none;
+                }
+
+                .nav .cta {
+                    display: none;
+                }
+
+                .menu-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: var(--spacing-xs);
+                    border-radius: 10px;
+                    border: 1px solid rgba(148, 163, 184, 0.25);
+                    background: rgba(15, 34, 61, 0.5);
+                    color: var(--text);
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    right: 30px;
+                }
+
+                .menu-btn:hover {
+                    background: rgba(15, 34, 61, 0.8);
+                    border-color: var(--brand);
+                }
+
+                .menu-btn svg {
+                    width: 20px;
+                    height: 20px;
+                    transition: transform 0.2s ease;
+                }
+
+                .nav.open .menu-btn svg {
+                    transform: rotate(90deg);
+                }
+
+                .nav.open ul {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 65px;
+                    right: 30px;
+                    background: #0b172a;
+                    border: 1px solid rgba(148, 163, 184, 0.2);
+                    border-radius: 14px;
+                    padding: var(--spacing-sm);
+                    box-shadow: var(--shadow);
+                    width: 200px;
+                    max-width: calc(100vw - 60px);
+                }
+
+                /* Reset completo para móviles */
+                body {
+                    width: 100vw;
+                    overflow-x: hidden;
+                }
+
+                .container {
+                    padding: 0 30px;
+                    margin: 0;
+                    width: 100%;
+                    max-width: none;
+                }
+
+                .nav {
+                    padding: var(--spacing-md) 0;
+                }
+
+                .hero-wrap {
+                    grid-template-columns: 1fr;
+                    text-align: center;
+                }
+
+                /* Forzar todos los elementos principales a no salirse */
+                section,
+                .hero,
+                .cards,
+                .grid-3,
+                .testis,
+                .contact {
+                    width: 100%;
+                    max-width: 100vw;
+                    overflow-x: hidden;
+                    box-sizing: border-box;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="container nav" id="nav">
+                <a class="brand" href="#inicio" aria-label="GREENTECH inicio">
+                    <img
+                        src="assets/logo-greentech.png"
+                        alt="logo-greentech"
+                        style="width: 130px"
+                    />
+                </a>
+                <button
+                    class="menu-btn"
+                    aria-controls="menu"
+                    aria-expanded="false"
+                    id="menuBtn"
+                    aria-label="Abrir menú de navegación"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M3 12h18M3 6h18M3 18h18"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </button>
+                <ul id="menu" aria-label="Secciones del sitio">
+                    <li><a class="link" href="#servicios">Servicios</a></li>
+                    <li>
+                        <a class="link" href="#por-que">¿Por qué nosotros?</a>
+                    </li>
+                    <li><a class="link" href="#testimonios">Testimonios</a></li>
+                    <li><a class="link" href="#contacto">Contacto</a></li>
+                </ul>
+                <a
+                    class="cta"
+                    href="https://wa.me/573019764062"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Escríbenos por WhatsApp"
+                >
+                    <!-- WhatsApp icon -->
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M20.52 3.48A11.84 11.84 0 0 0 12.06 0C5.64 0 .44 5.21.44 11.61c0 2.05.54 4.05 1.56 5.82L0 24l6.76-1.97a11.63 11.63 0 0 0 5.3 1.32h.01c6.42 0 11.62-5.21 11.62-11.62 0-3.11-1.21-6.04-3.19-8.07ZM12.07 21.3h-.01a9.68 9.68 0 0 1-4.93-1.35l-.35-.21-4.01 1.17 1.17-3.92-.23-.4a9.64 9.64 0 0 1-1.43-5.07c0-5.35 4.35-9.7 9.7-9.7 2.59 0 5.02 1 6.85 2.83a9.62 9.62 0 0 1 2.84 6.86c0 5.35-4.36 9.69-9.7 9.69Zm5.44-7.27c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.67-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.93-2.2-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35Z"
+                        />
+                    </svg>
+                    <span>Solicitar servicio</span>
+                </a>
+            </div>
+        </header>
+
+        <main id="inicio">
+            <!-- HERO -->
+            <section class="hero">
+                <div class="container hero-wrap">
+                    <div>
+                        <span class="eyebrow"
+                            >Ambientes saludables · Espacios seguros</span
+                        >
+                        <h1>
+                            Control de plagas <br />
+                            limpieza de tanques <br />
+                            impermeabilizaciones en Cartagena.
+                        </h1>
+                        <p class="lead">
+                            GREENTECH CC más que soluciones, somos una
+                            experiencia de calidad. Mantenemos tus espacios
+                            limpios y ambientes sanos.
+                        </p>
+                        <div class="hero-cta">
+                            <a
+                                class="cta"
+                                href="https://wa.me/573019764062"
+                                target="_blank"
+                                rel="noopener"
+                                >Hablar por WhatsApp</a
+                            >
+                            <a class="ghost" href="#servicios">Ver servicios</a>
+                        </div>
+                    </div>
+                    <div class="hero-card" aria-label="Datos y cobertura">
+                        <div class="hero-grid">
+                            <div class="stat">
+                                <span>Tiempo de respuesta</span>
+                                <b>&lt; 1 hora</b>
+                            </div>
+                            <div class="stat">
+                                <span>Clientes satisfechos</span>
+                                <b>+450</b>
+                            </div>
+                            <div class="stat">
+                                <span>Cobertura</span>
+                                <b>Cartagena y alrededores</b>
+                            </div>
+                            <div class="stat">
+                                <span>Productos</span>
+                                <b>Ecológicos y certificados</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICIOS -->
+            <section id="servicios">
+                <div class="container">
+                    <h2 class="section-title">Nuestros servicios</h2>
+                    <p class="section-lead">
+                        Soluciones integrales para hogares, restaurantes,
+                        hoteles, oficinas y conjuntos residenciales.
+                    </p>
+                    <div class="cards" role="list">
+                        <article class="card fumigacion" role="listitem">
+                            <div class="card-title">
+                                <span class="badge">🦟 Control integral</span>
+                            </div>
+                            <div class="card-content">
+                                <h3>Fumigación Integral</h3>
+                                <p>
+                                    Control de insectos voladores, rastreros y
+                                    roedores con técnicas seguras para personas
+                                    y mascotas.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card tanques" role="listitem">
+                            <div class="card-title">
+                                <span class="badge">🚰 Salubridad</span>
+                            </div>
+                            <div class="card-content">
+                                <h3>Lavado de Tanques de Agua</h3>
+                                <p>
+                                    Limpieza y desinfección certificada de
+                                    tanques de agua potable para asegurar
+                                    calidad y pureza.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card desinfeccion" role="listitem">
+                            <div class="card-title">
+                                <span class="badge">🌬️ Higiene ambiental</span>
+                            </div>
+                            <div class="card-content">
+                                <h3>Desinfección de Espacios</h3>
+                                <p>
+                                    Eliminación de bacterias, hongos y virus en
+                                    residencias, oficinas, locales y bodegas.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card seguridad" role="listitem">
+                            <div class="card-title">
+                                <span class="badge">🛡️ Protección</span>
+                            </div>
+                            <div class="card-content">
+                                <h3>Soluciones de Seguridad</h3>
+                                <p>
+                                    Agentes de seguridad, seguridad canina y
+                                    escoltas para instalaciones, eventos y
+                                    protección personal.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIFERENCIALES -->
+            <section id="por-que">
+                <div class="container">
+                    <h2 class="section-title">¿Por qué elegir GREENTECH CC?</h2>
+                    <p class="section-lead">
+                        Combinamos expertos certificados, insumos ecológicos y
+                        un servicio rápido para darte resultados duraderos.
+                    </p>
+                    <div class="grid-3">
+                        <div class="feature">
+                            <h4>Productos ecológicos</h4>
+                            <p>
+                                Trabajamos con insumos de baja toxicidad y
+                                procedimientos responsables con el ambiente.
+                            </p>
+                        </div>
+                        <div class="feature">
+                            <h4>Respuesta inmediata</h4>
+                            <p>
+                                Coordinamos tu servicio en minutos y acudimos en
+                                el menor tiempo posible.
+                            </p>
+                        </div>
+                        <div class="feature">
+                            <h4>Personal calificado</h4>
+                            <p>
+                                Técnicos con experiencia en saneamiento básico,
+                                control de plagas y seguridad privada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIOS -->
+            <section id="testimonios">
+                <div class="container">
+                    <h2 class="section-title">Experiencias de clientes</h2>
+                    <div class="testis">
+                        <blockquote class="quote">
+                            "Durante el tiempo de nuestra relación comercial,
+                            GREENTECH CC SAS ha demostrado compromiso, calidad y
+                            cumplimiento en cada una de sus responsabilidades,
+                            por lo que recomendamos ampliamente sus servicios."
+                            <b>Edificio PortoNovo</b>
+                        </blockquote>
+                        <blockquote class="quote">
+                            "GREENTECH CC SAS ha demostrado una ejecución
+                            impecable y cumplimiento riguroso de los estándares
+                            técnicos y de calidad. Su enfoque profesional y
+                            capacidad de respuesta los convierten en un socio
+                            estratégico de alto valor."
+                            <b>Restaurante Bahía Marina</b>
+                        </blockquote>
+                        <blockquote class="quote">
+                            "Un equipo comprometido, cumplido y orientado a la
+                            excelencia. Trabajar con GREENTECH CC SAS siempre ha
+                            sido sinónimo de confianza y resultados."
+                            <b>Restaurante Bahía Marina</b>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACTO -->
+            <section id="contacto">
+                <div class="container">
+                    <h2 class="section-title">Contáctanos</h2>
+                    <div class="contact">
+                        <div class="panel">
+                            <h3>Solicita tu cotización gratuita</h3>
+                            <p class="section-lead">
+                                Te respondemos en menos de 10 minutos.
+                            </p>
+                            <ul class="list">
+                                <li>
+                                    <!-- phone -->
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.1.37 2.28.57 3.5.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.2 2.4.57 3.5a1 1 0 0 1-.24 1.01l-2.2 2.2Z"
+                                        />
+                                    </svg>
+                                    <div>
+                                        <b>WhatsApp</b><br />
+                                        <a
+                                            href="https://wa.me/573019764062"
+                                            target="_blank"
+                                            rel="noopener"
+                                            >+57 301 976 4062</a
+                                        >
+                                    </div>
+                                </li>
+                                <li>
+                                    <!-- mail -->
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm8 7 8-5H4l8 5Zm-8 7h16V9l-8 5L4 9v9Z"
+                                        />
+                                    </svg>
+                                    <div>
+                                        <b>Correo</b><br />
+                                        <a
+                                            href="mailto:info@greentechcartagena.com"
+                                            >info@greentechcartagena.com</a
+                                        >
+                                    </div>
+                                </li>
+                                <li>
+                                    <!-- map -->
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M15 19 9 22 3 19V5l6 3 6-3 6 3v14l-6-3Zm-6-2.18V7L5 5.33v9.5L9 16.82Zm2 0 4-2V5.18l-4 2v9.64Zm6-1.31 2 .99V7.33l-2-.99v11.17Z"
+                                        />
+                                    </svg>
+                                    <div>
+                                        <b>Ubicación</b><br />
+                                        Cartagena de Indias, Colombia
+                                    </div>
+                                </li>
+                                <li>
+                                    <!-- ig -->
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.4.4.6.2 1 .4 1.5.9.5.5.7.9.9 1.5.2.5.3 1.2.4 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.4-.2.6-.4 1-.9 1.5-.5.5-.9.7-1.5.9-.5.2-1.2.3-2.4.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.4-1.5-.9-.5-.5-.7-.9-.9-1.5-.2-.5-.3-1.2-.4-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.4.2-.6.4-1 .9-1.5.5-.5.9-.7 1.5-.9.5-.2 1.2-.3 2.4-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.1 0-3.5 0-4.7.1-1 .1-1.5.2-1.8.3-.5.1-.8.3-1.1.6-.3.3-.5.6-.6 1.1-.1.3-.2.8-.3 1.8-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1 .2 1.5.3 1.8.1.5.3.8.6 1.1.3.3.6.5 1.1.6.3.1.8.2 1.8.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1-.1 1.5-.2 1.8-.3.5-.1.8-.3 1.1-.6.3-.3.6-.6.6-1.1.1-.3.2-.8.3-1.8.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1-.2-1.5-.3-1.8-.1-.5-.3-.8-.6-1.1-.3-.3-.6-.5-1.1-.6-.3-.1-.8-.2-1.8-.3-1.2-.1-1.6-.1-4.7-.1Zm0 2.8a5.2 5.2 0 1 1 0 10.4 5.2 5.2 0 0 1 0-10.4Zm0 1.8a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Zm5.3-.9a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"
+                                        />
+                                    </svg>
+                                    <div>
+                                        <b>Instagram</b><br />
+                                        <a
+                                            href="https://www.instagram.com/_"
+                                            target="_blank"
+                                            rel="noopener"
+                                            >@_</a
+                                        >
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel">
+                            <h3>Escríbenos ahora</h3>
+                            <form
+                                action="https://wa.me/573019764062"
+                                method="get"
+                                onsubmit="return goWA(event)"
+                            >
+                                <label class="sr" for="msg">Mensaje</label>
+                                <textarea
+                                    id="msg"
+                                    name="text"
+                                    rows="6"
+                                    placeholder="Cuéntanos qué servicio necesitas y tu barrio…"
+                                    style="
+                                        width: 100%;
+                                        border-radius: var(--spacing-sm);
+                                        border: 1px solid
+                                            rgba(148, 163, 184, 0.25);
+                                        background: #071221;
+                                        color: var(--text);
+                                        padding: var(--spacing-sm);
+                                    "
+                                ></textarea>
+                                <div
+                                    style="
+                                        display: flex;
+                                        gap: var(--spacing-sm);
+                                        margin-top: var(--spacing-sm);
+                                        align-items: center;
+                                    "
+                                >
+                                    <button class="cta" type="submit">
+                                        Enviar por WhatsApp
+                                    </button>
+                                </div>
+                            </form>
+                            <script>
+                                function goWA(e) {
+                                    e.preventDefault();
+                                    var t =
+                                        document.getElementById("msg").value ||
+                                        "Hola, quiero una cotización";
+                                    var url =
+                                        "https://wa.me/573019764062?text=" +
+                                        encodeURIComponent(t);
+                                    window.open(url, "_blank");
+                                    return false;
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div
+                class="container"
+                style="
+                    display: flex;
+                    justify-content: space-between;
+                    gap: var(--spacing-sm);
+                    flex-wrap: wrap;
+                "
+            >
+                <div>
+                    © <span id="year"></span> GREENTECH CC — Todos los derechos
+                    reservados.
+                </div>
+                <div>Hecho con ❤️ en Cartagena</div>
+            </div>
+        </footer>
+
+        <!-- Botón flotante WhatsApp para móviles -->
+        <a
+            class="floating-whatsapp"
+            href="https://wa.me/573019764062"
+            target="_blank"
+            rel="noopener"
+            aria-label="Contactar por WhatsApp"
+        >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                    d="M20.52 3.48A11.84 11.84 0 0 0 12.06 0C5.64 0 .44 5.21.44 11.61c0 2.05.54 4.05 1.56 5.82L0 24l6.76-1.97a11.63 11.63 0 0 0 5.3 1.32h.01c6.42 0 11.62-5.21 11.62-11.62 0-3.11-1.21-6.04-3.19-8.07ZM12.07 21.3h-.01a9.68 9.68 0 0 1-4.93-1.35l-.35-.21-4.01 1.17 1.17-3.92-.23-.4a9.64 9.64 0 0 1-1.43-5.07c0-5.35 4.35-9.7 9.7-9.7 2.59 0 5.02 1 6.85 2.83a9.62 9.62 0 0 1 2.84 6.86c0 5.35-4.36 9.69-9.7 9.69Zm5.44-7.27c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.67-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.93-2.2-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35Z"
+                />
+            </svg>
+        </a>
+
+        <script>
+            // Año dinámico
+            document.getElementById("year").textContent =
+                new Date().getFullYear();
+            // Menú móvil
+            const nav = document.getElementById("nav");
+            const btn = document.getElementById("menuBtn");
+            btn &&
+                btn.addEventListener("click", () =>
+                    nav.classList.toggle("open"),
+                );
+        </script>
+    </body>
+</html>
